@@ -41,6 +41,7 @@ public class MainActivity extends Activity implements OnItemClickListener {
 		listView.setAdapter(adapter);
 		setCourseData();
 		
+		// void OnItemClick生成
 		listView.setOnItemClickListener(this);
 	}
 
@@ -102,6 +103,7 @@ public class MainActivity extends Activity implements OnItemClickListener {
 	public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
 			long arg3) {
 		// TODO Auto-generated method stub
+		// 詳細画面CourseDetailへの画面遷移とデータ渡し
 		CourseItem item = (CourseItem)arg0.getItemAtPosition(arg2);
 		Intent intent = new Intent(this, CourseDetail.class);
 		intent.putExtra("date", item.date);

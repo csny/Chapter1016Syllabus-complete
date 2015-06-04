@@ -14,12 +14,14 @@ public class CourseDetail extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_course_detail);
 		
+		// メニュー画面MainActivityからのデータ受け取り
 		Intent intent = getIntent();
 		String dateStr = intent.getStringExtra("date");
 		String titleStr = intent.getStringExtra("title");
 		String teacherStr = intent.getStringExtra("teacher");
 		String detailStr = intent.getStringExtra("detail");
 		
+		// レイアウトへの表示
 		TextView dateText = (TextView)findViewById(R.id.dateText);
 		dateText.setText(dateStr);
 		TextView titleText = (TextView)findViewById(R.id.titleText);
